@@ -32,7 +32,8 @@ while counter < 6:
     if inputchoice.lower() in ["word","a word"]:
         guess = input("Input your word guess: ")
         if guess == word:
-            print("Correct! Good Job!")
+            print("Good Job! You found the word and saved Jeff")
+            counter = 7
         else:
             print("Incorrect")
             counter += 1
@@ -63,12 +64,14 @@ while counter < 6:
 
         if madeWord == word:
             print("Good Job! You found the word and saved Jeff")
+            counter = 7
             break
         
         print(f"Current wrong guesses: {', '.join(wrongGuesses)}")
 
-print("Sadly you didn't guess the word in time and Jeff has been hung")
-print(f"The word was {word}")
+while counter < 7:
+  print("Sadly you didn't guess the word in time and Jeff has been hung")
+  print(f"The word was {word}")
 
 
 
